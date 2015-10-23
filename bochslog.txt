@@ -32,7 +32,7 @@
 00000000000i[      ]   SB16 support: no
 00000000000i[      ]   USB support: yes
 00000000000i[      ]   VGA extension support: vbe
-00000000000i[MEM0  ] allocated memory at 0x7ffad373f010. after alignment, vector=0x7ffad3740000
+00000000000i[MEM0  ] allocated memory at 0x7f6f4c0cf010. after alignment, vector=0x7f6f4c0d0000
 00000000000i[MEM0  ] 32.00MB
 00000000000i[MEM0  ] mem block size = 0x00100000, blocks=32
 00000000000i[MEM0  ] rom at 0xfffe0000/131072 ('/usr/share/bochs/BIOS-bochs-latest')
@@ -42,7 +42,7 @@
 00000000000i[DEV   ] PIIX3 PCI-to-ISA bridge present at device 1, function 0
 00000000000i[PLUGIN] init_dev of 'cmos' plugin device by virtual method
 00000000000i[CMOS  ] Using local time for initial clock
-00000000000i[CMOS  ] Setting initial clock to: Fri Oct 23 16:38:09 2015 (time0=1445632689)
+00000000000i[CMOS  ] Setting initial clock to: Fri Oct 23 17:58:26 2015 (time0=1445637506)
 00000000000i[PLUGIN] init_dev of 'dma' plugin device by virtual method
 00000000000i[DMA   ] channel 4 used by cascade
 00000000000i[PLUGIN] init_dev of 'pic' plugin device by virtual method
@@ -69,7 +69,7 @@
 00000000000i[CD1   ] load cdrom with path='os.iso'
 00000000000i[CD1   ] Opening image file as a cd.
 00000000000i[HD    ] Media present in CD-ROM drive
-00000000000i[HD    ] Capacity is 235 sectors (0.46 MB)
+00000000000i[HD    ] Capacity is 748 sectors (1.46 MB)
 00000000000i[HD    ] Using boot sequence cdrom, none, none
 00000000000i[HD    ] Floppy boot signature check is enabled
 00000000000i[PLUGIN] init_dev of 'pci_ide' plugin device by virtual method
@@ -184,28 +184,28 @@
 00001501158i[BXVGA ] VBE known Display Interface b0c0
 00001501190i[BXVGA ] VBE known Display Interface b0c5
 00001504115i[VBIOS ] VBE Bios $Id: vbe.c,v 1.65 2014/07/08 18:02:25 vruppert Exp $
-00005715688i[BIOS  ] IDE time out
-01884165283i[BIOS  ] Booting from 07c0:0000
-01884266583i[BIOS  ] int13_harddisk: function 41, unmapped device for ELDL=80
-01884270263i[BIOS  ] int13_harddisk: function 08, unmapped device for ELDL=80
-01884273928i[BIOS  ] *** int 15h function AX=00c0, BX=0000 not yet supported!
-02075687000p[SDL   ] >>PANIC<< POWER button turned off.
-02075687000i[CPU0  ] CPU is in protected mode (active)
-02075687000i[CPU0  ] CS.mode = 32 bit
-02075687000i[CPU0  ] SS.mode = 32 bit
-02075687000i[CPU0  ] EFER   = 0x00000000
-02075687000i[CPU0  ] | EAX=00000006  EBX=0002cd80  ECX=00000001  EDX=00000003
-02075687000i[CPU0  ] | ESP=00067ec4  EBP=00067ee0  ESI=0002cef0  EDI=0002cef1
-02075687000i[CPU0  ] | IOPL=0 id vip vif ac vm rf nt of df if tf sf zf af PF cf
-02075687000i[CPU0  ] | SEG sltr(index|ti|rpl)     base    limit G D
-02075687000i[CPU0  ] |  CS:0008( 0001| 0|  0) 00000000 ffffffff 1 1
-02075687000i[CPU0  ] |  DS:0010( 0002| 0|  0) 00000000 ffffffff 1 1
-02075687000i[CPU0  ] |  SS:0010( 0002| 0|  0) 00000000 ffffffff 1 1
-02075687000i[CPU0  ] |  ES:0010( 0002| 0|  0) 00000000 ffffffff 1 1
-02075687000i[CPU0  ] |  FS:0010( 0002| 0|  0) 00000000 ffffffff 1 1
-02075687000i[CPU0  ] |  GS:0010( 0002| 0|  0) 00000000 ffffffff 1 1
-02075687000i[CPU0  ] | EIP=00100030 (00100030)
-02075687000i[CPU0  ] | CR0=0x60000011 CR2=0x00000000
-02075687000i[CPU0  ] | CR3=0x00000000 CR4=0x00000000
-02075687000i[CMOS  ] Last time is 1445634764 (Fri Oct 23 17:12:44 2015)
-02075687000i[SIM   ] quit_sim called with exit code 1
+00005715665i[BIOS  ] IDE time out
+01830977056i[BIOS  ] Booting from 07c0:0000
+01831077768i[BIOS  ] int13_harddisk: function 41, unmapped device for ELDL=80
+01831081448i[BIOS  ] int13_harddisk: function 08, unmapped device for ELDL=80
+01831085113i[BIOS  ] *** int 15h function AX=00c0, BX=0000 not yet supported!
+01925806000p[SDL   ] >>PANIC<< User requested shutdown.
+01925806000i[CPU0  ] CPU is in real mode (active)
+01925806000i[CPU0  ] CS.mode = 16 bit
+01925806000i[CPU0  ] SS.mode = 16 bit
+01925806000i[CPU0  ] EFER   = 0x00000000
+01925806000i[CPU0  ] | EAX=00000020  EBX=00020cbc  ECX=00001829  EDX=ffffffff
+01925806000i[CPU0  ] | ESP=00001fda  EBP=00001ff0  ESI=00020135  EDI=00000000
+01925806000i[CPU0  ] | IOPL=0 id vip vif ac vm rf nt of df if tf sf ZF af PF cf
+01925806000i[CPU0  ] | SEG sltr(index|ti|rpl)     base    limit G D
+01925806000i[CPU0  ] |  CS:f000( 0003| 0|  0) 000f0000 0000ffff 0 0
+01925806000i[CPU0  ] |  DS:0040( 0004| 0|  0) 00000400 0000ffff 0 0
+01925806000i[CPU0  ] |  SS:0000( 0004| 0|  0) 00000000 0000ffff 0 0
+01925806000i[CPU0  ] |  ES:0000( 0004| 0|  0) 00000000 0000ffff 0 0
+01925806000i[CPU0  ] |  FS:0000( 0004| 0|  0) 00000000 0000ffff 0 0
+01925806000i[CPU0  ] |  GS:0000( 0004| 0|  0) 00000000 0000ffff 0 0
+01925806000i[CPU0  ] | EIP=0000e873 (0000e873)
+01925806000i[CPU0  ] | CR0=0x60000010 CR2=0x00000000
+01925806000i[CPU0  ] | CR3=0x00000000 CR4=0x00000000
+01925806000i[CMOS  ] Last time is 1445639431 (Fri Oct 23 18:30:31 2015)
+01925806000i[SIM   ] quit_sim called with exit code 1
