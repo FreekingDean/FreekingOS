@@ -3,17 +3,17 @@ OBJECTS = loader.o kmain.o
 #CC = gcc
 #CFLAGS = -m32 -nostdlib -nostdinc -fno-stack-protector \
 #				 -nostartfiles -nodefaultlibs -Wall -Wextra -Werror -c
-CC = gccgo
+CC = gccgo -m32
 #CFLAGS = -static -Werror -nostdlib -nostartfiles -nodefaultlibs
 CFLAGS = -Wall -Wextra -fno-split-stack -nostdlib -nodefaultlibs
 
 LD=ld
-LDFLAGS = -T link.ld -melf_x86_64 -Igccgo
+LDFLAGS = -T link.ld -melf_i386 -Igccgo
 #LD=gccgo
 #LDFLAGS = -Wl,-u,pthread_create,-T,link.ld -n -fno-split-stack -nostartfiles -static -static-libgcc -static-libgo -m32
 
 AS = nasm
-ASFLAGS = -f elf64
+ASFLAGS = -f elf32
 
 all: kernel.elf
 
