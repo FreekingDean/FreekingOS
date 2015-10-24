@@ -37,7 +37,7 @@ run: os.iso
 	echo -ne 'c' | bochs -f bochsrc.txt -q
 
 %.o: %.go
-	$(CC) $(CFLAGS) -c $< -o $@
+	GOARCH=386 $(CC) $(CFLAGS) -c $< -o $@
 
 %.o: %.s
 	$(AS) $(ASFLAGS) $< -o $@
